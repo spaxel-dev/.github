@@ -1,0 +1,83 @@
+name: 🐛 Bug Report
+description: File a bug report.
+title: "[🐛]: "
+labels: ["bug"]
+type: "Bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: A clear and concise description of what the bug is.
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: regression
+    attributes:
+      label: Is this a regression?
+      description: |
+        Did this work in a previous build or release?
+        If you can try a previous release or build to find out, that can help us narrow down the problem.
+        If you don't know, that's OK.
+      options:
+        - "Yes"
+        - "No"
+        - "Unknown"
+      default: 2
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Describe the steps needed to reproduce the bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        Provide details about the environment where the issue occurred.
+        This can include:
+        - Application version
+        - OS (name, version, kernel)
+        - Browser and User-Agent (if applicable)
+        - Any other relevant system information
+      placeholder: |
+        - App Version: 1.0.3
+        - OS: macOS 14.5 (Darwin 23.5.0)
+        - Browser: Safari 17.5
+        - User-Agent: Mozilla/5.0 ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other relevant context (e.g. screenshots, screen recordings) about the problem here.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/spaxel-dev/.github-private/blob/main/profile/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

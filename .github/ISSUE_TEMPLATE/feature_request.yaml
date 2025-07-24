@@ -1,0 +1,76 @@
+name: 🚀 Feature Request
+description: Suggest an improvement, enhancement, or new functionality.
+title: "[🚀]: "
+labels: ["enhancement"]
+type: "Feature"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature or enhancement! Please complete the form below to help us understand and evaluate your request.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: Provide a clear and concise summary of the feature or enhancement you're requesting.
+      placeholder: A short summary of what the feature is and why it's useful.
+      value: I want the power of the darkside... or at least a dark mode toggle that doesn’t crash everything.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the problem or use case this feature would address. Be as specific as possible.
+      placeholder: |
+        - Who is affected?
+        - What limitations exist today?
+        - How would this feature improve the experience?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: If you have a proposed implementation or approach in mind, describe it here.
+      placeholder: |
+        - Describe how this could be implemented (optional)
+        - Are there existing patterns or references?
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternatives or workarounds?
+      placeholder: Describe any alternative solutions or workarounds you’ve tried or considered.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope of Impact
+      description: How significant is the impact of this feature?
+      options:
+        - Nice to have
+        - Improves usability significantly
+        - Critical for workflow
+      default: 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other relevant context, references, mockups, or screenshots.
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this request, you agree to follow our [Code of Conduct](https://github.com/spaxel-dev/.github-private/blob/main/profile/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
