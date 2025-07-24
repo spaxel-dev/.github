@@ -3,6 +3,8 @@ description: File a bug report.
 title: "[🐛]: "
 labels: ["bug"]
 type: "Bug"
+projects:
+  - "spaxel-dev/3"
 body:
   - type: markdown
     attributes:

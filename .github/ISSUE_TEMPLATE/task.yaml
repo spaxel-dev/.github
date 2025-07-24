@@ -3,6 +3,8 @@ description: For general maintenance, chores, or internal tasks that aren't bug 
 title: "[🧹]: "
 labels: ["chore"]
 type: "Task"
+projects:
+  - "spaxel-dev/3"
 body:
   - type: markdown
     attributes:

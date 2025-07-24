@@ -3,6 +3,8 @@ description: Suggest an improvement, enhancement, or new functionality.
 title: "[🚀]: "
 labels: ["enhancement"]
 type: "Feature"
+projects:
+  - "spaxel-dev/3"
 body:
   - type: markdown
     attributes:
