@@ -1,0 +1,56 @@
+name: 🧹 Task
+description: For general maintenance, chores, or internal tasks that aren't bug reports or feature requests.
+title: "[🧹]: "
+labels: ["chore"]
+type: "Task"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to describe internal tasks, tech debt, or general maintenance work.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Task Summary
+      description: What needs to be done?
+      placeholder: A short summary of the task.
+      value: I want to clean something up...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is this task needed?
+      description: Describe the reason behind this task. Is it blocking something? Is it tech debt? Is it preventive?
+      placeholder: |
+        - To keep dependencies up to date
+        - To clean up legacy config
+        - To improve maintainability
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation Notes
+      description: If known, describe how this task could be approached. Feel free to include commands, checklists, or references.
+      placeholder: |
+        - Run `npx npm-check-updates -u && npm install`
+        - Update GitHub Actions workflow file to use `node@20`
+  
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other relevant context, screenshots, or links.
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this task, you agree to follow our [Code of Conduct](https://github.com/spaxel-dev/.github-private/blob/main/profile/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
